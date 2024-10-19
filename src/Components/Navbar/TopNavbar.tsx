@@ -58,7 +58,7 @@ const TopNavbar = () => {
           </div>
         </div>
         {/* social media icons */}
-        <div className="flex items-center mt-[15px] mb-[10px]">
+        <div className="flex items-center my-2">
           <FaTwitter
             size={25}
             className="mr-5 hover:text-blue-500 duration-300 cursor-pointer"

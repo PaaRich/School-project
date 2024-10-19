@@ -3,8 +3,13 @@ export const SolidNavWrapper = styled.div`
   .active {
     color: green;
   }
+  box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.41);
+  -webkit-box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.41);
 `;
-export const NavbarWrapper = styled.div``;
+export const NavbarWrapper = styled.div`
+  padding: 0.75rem 0;
+`;
 export const TopNavbarWrapper = styled.div`
   position: relative;
   color: white;
@@ -38,4 +43,10 @@ export const Search = styled.div`
     color: black;
     padding: 0.5rem;
   }
+`;
+export const NavDropWrapper = styled.div`
+  width: 70%;
+  position: absolute;
+  top: 182px;
+  right: 0%;
 `;

@@ -2,9 +2,15 @@ import { NavbarWrapper } from "./Navbar.styled";
 import { SolidNavWrapper } from "./Navbar.styled";
 import logo from "../../assets/Casablanca_Logo.jpg";
 import TopNavbar from "./TopNavbar";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import NavDrop from "./NavDrop";
+import aboutImg from "../../assets/Casablanca_Logo.jpg";
+//import { useState } from "react";
+import lists from "./utils";
 
 const Navbar = () => {
+  //const [displayNavDrop, setDisplayNavDrop] = useState(true);
+
   return (
     <SolidNavWrapper>
       <TopNavbar />
@@ -16,27 +22,25 @@ const Navbar = () => {
           </div>
           {/* links */}
           <div>
-            <ul className="flex items-center">
-              <li>
-                <Link to="/">HOME</Link>
-              </li>
-              <li>
-                <div className="dropdown dropdown-hover">
-                  <div tabIndex={0} role="button" className="btn m-1">
-                    ABOUT
-                  </div>
-                  <div
-                    tabIndex={0}
-                    className="dropdown-content card card-compact bg-primary text-primary-content z-[1] w-64 p-2 shadow"
-                  >
-                    <div className="card-body">
-                      <h3 className="card-title">Card title!</h3>
-                      <p>you can use any element as a dropdown.</p>
-                    </div>
-                  </div>
+            <div className="flex items-center">
+              {/* home */}
+              <div>
+                <NavLink to="/">HOME</NavLink>
+              </div>
+              {/* about */}
+              <div className="c-parent group">
+                <span
+                //onMouseEnter={() => setDisplayNavDrop(true)}
+                //onMouseLeave={() => setDisplayNavDrop(false)}
+                >
+                  ABOUT
+                </span>
+                {/* display links */}
+                <div className="c-child hidden group-hover:block">
+                  <NavDrop img={aboutImg} lists={lists} />
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
         </div>
       </NavbarWrapper>
