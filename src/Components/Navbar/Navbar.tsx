@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 import NavDrop from "./NavDrop";
 import aboutImg from "../../assets/Casablanca_Logo.jpg";
 //import { useState } from "react";
-import lists from "./utils";
+import lists from "../../utils";
 
 const Navbar = () => {
   //const [displayNavDrop, setDisplayNavDrop] = useState(true);
