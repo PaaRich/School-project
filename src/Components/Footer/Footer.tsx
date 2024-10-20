@@ -27,19 +27,22 @@ const Footer = () => {
           </h3>
           <div>
             {/* email input */}
-            <div className="flex flex-col mb-10">
+            <form className="flex flex-col mb-10">
               <input
                 type="email"
                 name="email"
                 className="bg-transparent border-white border-[3px] rounded p-2 focus:outline-0 mt-7"
                 placeholder="Your email"
               />
+
               <FaArrowRightLong
+                type="submit"
                 size={25}
                 className="self-end my-2 hover:translate-x-1 duration-300 cursor-pointer"
               />
+
               <p>Subscribe to our Newsletter</p>
-            </div>
+            </form>
             {/* contact us icons */}
             <div>
               <h3 className="text-2xl border-b-2 border-b-white pb-3">
