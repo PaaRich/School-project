@@ -24,14 +24,17 @@ const Navbar = () => {
           <div>
             <div className="flex items-center">
               {/* home */}
-              <div>
-                <NavLink to="/">HOME</NavLink>
-              </div>
+
+              <NavLink className="mr-4" to="/">
+                HOME
+              </NavLink>
+
               {/* about */}
               <div className="c-parent group">
                 <span
-                //onMouseEnter={() => setDisplayNavDrop(true)}
-                //onMouseLeave={() => setDisplayNavDrop(false)}
+                  //onMouseEnter={() => setDisplayNavDrop(true)}
+                  //onMouseLeave={() => setDisplayNavDrop(false)}
+                  className="mr-4"
                 >
                   ABOUT
                 </span>
@@ -40,6 +43,28 @@ const Navbar = () => {
                   <NavDrop img={aboutImg} lists={lists} />
                 </div>
               </div>
+              {/* links */}
+              <NavLink className="mr-4" to="/academics">
+                ACADEMICS
+              </NavLink>
+              <NavLink className="mr-4" to="/admission">
+                ADMISSION
+              </NavLink>
+              <NavLink className="mr-4" to="/research">
+                RESEARCH
+              </NavLink>
+              <NavLink className="mr-4" to="/media">
+                MEDIA&PRESS
+              </NavLink>
+              <NavLink className="mr-4" to="/students">
+                STUDENTS
+              </NavLink>
+              <NavLink className="mr-4" to="/staff">
+                STAFF
+              </NavLink>
+              <NavLink className="mr-4" to="/alumini">
+                ALUMINI
+              </NavLink>
             </div>
           </div>
         </div>

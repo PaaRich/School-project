@@ -20,7 +20,7 @@ const NavDrop = ({ img, lists }: NavDropProps) => {
               <div className="mb-8">
                 <h2 className="text-2xl font-semibold">{list.heading}</h2>
                 <div className="flex flex-col">
-                  {list.list?.map((l, index) => (
+                  {list?.list.map((l, index) => (
                     <Link
                       className="border-b-2 p-1 hover:bg-slate-200 "
                       to={l[index]}

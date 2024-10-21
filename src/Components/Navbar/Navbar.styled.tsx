@@ -2,6 +2,7 @@ import styled from "styled-components";
 export const SolidNavWrapper = styled.div`
   .active {
     color: green;
+    text-decoration: underline;
   }
   box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.41);
   -webkit-box-shadow: 0px 6px 9px 0px rgba(0, 0, 0, 0.41);
@@ -50,3 +51,4 @@ export const NavDropWrapper = styled.div`
   top: 182px;
   right: 0%;
 `;
+export const SideBarWrapper = styled.div``;
