@@ -21,7 +21,7 @@ const Footer = () => {
     <FooterWrapper>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-4 max-w-[90%] mx-auto text-white">
         {/* first col */}
-        <div>
+        <div data-aos="fade-up" data-aos-duration="2000">
           <h3 className="text-sm border-b-2 border-b-white pb-3 tracking-widest">
             SUBSCRIBE
           </h3>
@@ -79,7 +79,7 @@ const Footer = () => {
           </div>
         </div>
         {/* second col */}
-        <div>
+        <div data-aos="fade-up" data-aos-duration="2000">
           <h3 className="text-sm border-b-2 border-b-white pb-3 tracking-widest">
             ONLINE SERVICES
           </h3>
@@ -97,7 +97,7 @@ const Footer = () => {
           </div>
         </div>
         {/* third col */}
-        <div>
+        <div data-aos="fade-up" data-aos-duration="2000">
           <h3 className="text-sm border-b-2 border-b-white pb-3 tracking-widest">
             THE UNIVERSITY
           </h3>
@@ -115,7 +115,7 @@ const Footer = () => {
           </div>
         </div>
         {/* fourth col */}
-        <div>
+        <div data-aos="fade-up" data-aos-duration="2000">
           <h3 className="text-sm border-b-2 border-b-white pb-3 tracking-widest">
             SUPPORT KNUST
           </h3>

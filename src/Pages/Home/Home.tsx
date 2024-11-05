@@ -9,10 +9,6 @@ import { FaGlobe, FaRegNewspaper, FaTwitter } from "react-icons/fa";
 import { FaCircleArrowRight } from "react-icons/fa6";
 import { TbSpeakerphone } from "react-icons/tb";
 import { TfiYoutube } from "react-icons/tfi";
-import AOS from "aos";
-import "aos/dist/aos.css"; // You can also use <link> for styles
-// ..
-AOS.init();
 
 const Home = () => {
   const carouselOption = {

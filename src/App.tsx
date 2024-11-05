@@ -10,7 +10,10 @@ import Staff from "./Pages/Staff/Staff";
 import Student from "./Pages/Students/Student";
 import Alumini from "./Pages/Alumini/Alumini";
 import Admission from "./Pages/Admission/Admission";
-
+import AOS from "aos";
+import "aos/dist/aos.css"; // You can also use <link> for styles
+// ..
+AOS.init();
 interface Links {
   subHeading?: string;
   content?: string[];
