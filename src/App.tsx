@@ -11,7 +11,45 @@ import Student from "./Pages/Students/Student";
 import Alumini from "./Pages/Alumini/Alumini";
 import Admission from "./Pages/Admission/Admission";
 
+interface Links {
+  subHeading?: string;
+  content?: string[];
+}
+
 function App() {
+  const link: Links[] = [
+    {
+      subHeading: "SCHOOL",
+      content: [
+        "admission",
+        "Sciences",
+        "Hospitality",
+        "Management",
+        "Domestic",
+      ],
+    },
+    {
+      subHeading: "DEPARTMENT",
+      content: [
+        "Engineering",
+        "Sciences",
+        "Hospitality",
+        "Management",
+        "Domestic",
+      ],
+    },
+
+    {
+      subHeading: "FACULTY",
+      content: [
+        "Engineering",
+        "Sciences",
+        "Hospitality",
+        "Management",
+        "Domestic",
+      ],
+    },
+  ];
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -20,7 +58,7 @@ function App() {
       <Route
         path="/about"
         element={
-          <LayoutFurther title="ABOUT">
+          <LayoutFurther title="ABOUT" links={link}>
             <About />
           </LayoutFurther>
         }
@@ -28,7 +66,7 @@ function App() {
       <Route
         path="/academics"
         element={
-          <LayoutFurther title="ACADEMICS">
+          <LayoutFurther title="ACADEMICS" links={link}>
             <Academics />
           </LayoutFurther>
         }
@@ -36,7 +74,7 @@ function App() {
       <Route
         path="/admission"
         element={
-          <LayoutFurther title="ADMISSION">
+          <LayoutFurther title="ADMISSION" links={link}>
             <Admission />
           </LayoutFurther>
         }
@@ -44,7 +82,7 @@ function App() {
       <Route
         path="/research"
         element={
-          <LayoutFurther title="RESEARCH">
+          <LayoutFurther title="RESEARCH" links={link}>
             <Research />
           </LayoutFurther>
         }
@@ -52,7 +90,7 @@ function App() {
       <Route
         path="/media"
         element={
-          <LayoutFurther title="MEDIA">
+          <LayoutFurther title="MEDIA" links={link}>
             <Media />
           </LayoutFurther>
         }
@@ -60,7 +98,7 @@ function App() {
       <Route
         path="/staff"
         element={
-          <LayoutFurther title="STAFF">
+          <LayoutFurther title="STAFF" links={link}>
             <Staff />
           </LayoutFurther>
         }
@@ -68,7 +106,7 @@ function App() {
       <Route
         path="/students"
         element={
-          <LayoutFurther title="STUDENT">
+          <LayoutFurther title="STUDENT" links={link}>
             <Student />
           </LayoutFurther>
         }
@@ -76,7 +114,7 @@ function App() {
       <Route
         path="/alumini"
         element={
-          <LayoutFurther title="ALUMINI">
+          <LayoutFurther title="ALUMINI" links={link}>
             <Alumini />
           </LayoutFurther>
         }

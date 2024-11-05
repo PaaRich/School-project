@@ -6,17 +6,23 @@ import Header from "../../Components/Reusable/Header";
 import { ReactElement } from "react";
 interface Props {
   title: string;
+  links: [
+    {
+      subHeading: string;
+      content: string[];
+    }
+  ];
   children: ReactElement;
 }
-const LayoutFurther = ({ title, children }: Props) => {
+const LayoutFurther = ({ title, links, children }: Props) => {
   return (
     <>
       <Navbar />
       <div className="max-w-[90%] mx-auto py-12">
         <Header title={title} />
         <div className="flex gap-x-8 mt-8">
-          <div className="basis-1/4 bg-green-300">
-            <SideBar title={title} />
+          <div className="basis-1/4">
+            <SideBar title={title} links={links} />
           </div>
 
           <div className="basis-3/4 bg-red-400">{children}</div>

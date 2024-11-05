@@ -1,21 +1,32 @@
 //import { SideBarProps } from "../../types";
 import { SideBarWrapper } from "./Navbar.styled";
 import { SideBarProps } from "../../types";
-const SideBar = ({ title }: SideBarProps) => {
+import { NavLink } from "react-router-dom";
+import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+
+const SideBar = ({ title, links }: SideBarProps) => {
   return (
     <SideBarWrapper>
-      {/* <div>
-        <h1>{heading}</h1>
+      <div>
+        <h1 className="bg-black text-xl text-white py-2 px-4 mb-4 font-bold">
+          {title}
+        </h1>
         {links?.map((link) => (
-          <div>
-            <h2>{link.subHeading}</h2>
-            {link.content.map(l=>)}
-            <div>{link.content}</div>
+          <div className="px-4">
+            <h2 className="font-bold my-3">{link.subHeading}</h2>
+            <div className="flex flex-col">
+              {link.content.map((aLink) => (
+                <div className="pl-2 py-1 hover:bg-slate-200 hover:translate-x-[0.1rem] border-l-2 hover:border-l-red-800 hover:border-l-4 duration-300 text-lg flex items-center justify-between">
+                  <NavLink className="w-full" to={aLink}>
+                    {aLink.toUpperCase()}
+                  </NavLink>
+                  <MdOutlineKeyboardDoubleArrowRight />
+                </div>
+              ))}
+            </div>
           </div>
         ))}
-      </div> */}
-      <h1>{title}</h1>
-      SideBar
+      </div>
     </SideBarWrapper>
   );
 };

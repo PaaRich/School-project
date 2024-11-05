@@ -3,7 +3,7 @@ export interface NavDropProps {
   lists?: [
     {
       heading?: string;
-      list?: string[];
+      list: string[];
     }
   ];
 }
@@ -18,12 +18,11 @@ export interface HeaderProps {
 }
 
 export interface SideBarProps {
-  title: string;
-  // heading?: string;
-  // links?: [
-  //   {
-  //     subHeading?: string;
-  //     content?: string[];
-  //   }
-  // ];
+  title?: string;
+  links?: [
+    {
+      subHeading: string;
+      content: string[];
+    }
+  ];
 }

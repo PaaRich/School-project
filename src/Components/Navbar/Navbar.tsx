@@ -5,11 +5,12 @@ import TopNavbar from "./TopNavbar";
 import { NavLink } from "react-router-dom";
 import NavDrop from "./NavDrop";
 import aboutImg from "../../assets/Casablanca_Logo.jpg";
-//import { useState } from "react";
+import { useState } from "react";
+import { IoMdArrowDropdown } from "react-icons/io";
 import lists from "../../utils";
 
 const Navbar = () => {
-  //const [displayNavDrop, setDisplayNavDrop] = useState(true);
+  const [isOpen, setIsOpen] = useState(true);
 
   return (
     <SolidNavWrapper>
@@ -30,19 +31,23 @@ const Navbar = () => {
               </NavLink>
 
               {/* about */}
-              <div className="c-parent group">
-                <span
-                  //onMouseEnter={() => setDisplayNavDrop(true)}
-                  //onMouseLeave={() => setDisplayNavDrop(false)}
-                  className="mr-4"
-                >
-                  ABOUT
-                </span>
-                {/* display links */}
-                <div className="c-child hidden group-hover:block">
-                  <NavDrop img={aboutImg} lists={lists} />
-                </div>
+
+              <div
+                className="flex items-end mr-4 hover:text-red-700"
+                onMouseEnter={() => setIsOpen(true)}
+                onMouseLeave={() => {
+                  setIsOpen(false);
+                }}
+              >
+                ABOUT
+                <IoMdArrowDropdown
+                  size={23}
+                  className={`${isOpen && "rotate-180"} duration-300`}
+                />
               </div>
+              {/* display links */}
+              {isOpen && <NavDrop img={aboutImg} lists={lists} />}
+
               {/* links */}
               <NavLink className="mr-4" to="/academics">
                 ACADEMICS

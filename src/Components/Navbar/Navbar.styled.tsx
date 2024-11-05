@@ -1,4 +1,5 @@
 import styled from "styled-components";
+
 export const SolidNavWrapper = styled.div`
   .active {
     color: green;
@@ -46,9 +47,10 @@ export const Search = styled.div`
   }
 `;
 export const NavDropWrapper = styled.div`
-  width: 70%;
   position: absolute;
   top: 182px;
-  right: 0%;
+  right: 1%;
+  width: 70%;
+  z-index: 1;
 `;
 export const SideBarWrapper = styled.div``;
