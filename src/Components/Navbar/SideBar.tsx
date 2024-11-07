@@ -13,15 +13,18 @@ const SideBar = ({ title, links }: SideBarProps) => {
         </h1>
         {links?.map((link) => (
           <div className="px-4">
-            <h2 className="font-bold my-3">{link.subHeading}</h2>
+            <h2 className="font-bold my-3">
+              {link.subHeading.toLocaleUpperCase()}
+            </h2>
             <div className="flex flex-col">
               {link.content.map((aLink) => (
-                <div className="pl-2 py-1 hover:bg-slate-200 hover:translate-x-[0.1rem] border-l-2 hover:border-l-red-800 hover:border-l-4 duration-300 text-lg flex items-center justify-between">
-                  <NavLink className="w-full" to={aLink}>
-                    {aLink.toUpperCase()}
-                  </NavLink>
+                <NavLink
+                  className="pl-2 py-1  hover:bg-slate-200 hover:translate-x-[0.1rem] border-l-2 hover:border-l-red-800 hover:border-l-4 duration-300 text-lg flex items-center justify-between"
+                  to={aLink.toLowerCase().replace(/[^a-zA-Z]/g, "")}
+                >
+                  {aLink}
                   <MdOutlineKeyboardDoubleArrowRight />
-                </div>
+                </NavLink>
               ))}
             </div>
           </div>

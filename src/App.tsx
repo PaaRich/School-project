@@ -10,8 +10,14 @@ import Staff from "./Pages/Staff/Staff";
 import Student from "./Pages/Students/Student";
 import Alumini from "./Pages/Alumini/Alumini";
 import Admission from "./Pages/Admission/Admission";
+import Mission from "./Pages/About/Mission";
+import AboutLandingPage from "./Pages/About/AboutLandingPage";
+import History from "./Pages/About/History";
 import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
+import Campus from "./Pages/About/Campus";
+import Policy from "./Pages/About/Policy";
+
 // ..
 AOS.init();
 interface Links {
@@ -19,37 +25,57 @@ interface Links {
   content?: string[];
 }
 
+// Virtual Tour
+
+// The Chancellor
+// Vice-Chancellor's Office
+// Welcome Message from VC
+// The Vice-Chancellor
+// The Pro Vice-Chancellor
+// Related Offices
+// Contact Information
+// Past Vice-Chancellors
+// Past Pro Vice-Chancellors
+
+// Registrar's Office
+
+// Finance Office
+// Related Offices
+// Financial Statements
+// Accounting Policies and
 function App() {
   const link: Links[] = [
     {
-      subHeading: "SCHOOL",
+      subHeading: "The Knust",
       content: [
-        "admission",
-        "Sciences",
-        "Hospitality",
-        "Management",
-        "Domestic",
+        " Strategic Mandate, Vision, Mission & Core Values",
+        "The Emblem",
+        "University History",
+        "University Policies",
+        "The Campus",
+        "Maps & Directions",
+        "Past Vice-Chancellors",
+        "Past Pro Vice-Chancellors",
+        "Past Registrars",
+        "Council Charter",
       ],
     },
     {
-      subHeading: "DEPARTMENT",
+      subHeading: "Administration of the University",
       content: [
-        "Engineering",
-        "Sciences",
-        "Hospitality",
-        "Management",
-        "Domestic",
+        "The University Council",
+        "The Principal Officers",
+        "Professional Officers",
       ],
     },
 
     {
-      subHeading: "FACULTY",
+      subHeading: "Registrar's Offices",
       content: [
-        "Engineering",
-        "Sciences",
-        "Hospitality",
-        "Management",
-        "Domestic",
+        "The Registrar",
+        "Divisions",
+        "Registrar's Contact",
+        "Past Registrars",
       ],
     },
   ];
@@ -58,6 +84,8 @@ function App() {
       <Route path="/" element={<Layout />}>
         <Route index element={<Home />} />
       </Route>
+
+      {/* ABOUT ROUTING */}
       <Route
         path="/about"
         element={
@@ -65,7 +93,19 @@ function App() {
             <About />
           </LayoutFurther>
         }
-      />
+      >
+        <Route index element={<AboutLandingPage />} />
+        <Route
+          path="strategicmandatevisionmissioncorevalues"
+          element={<Mission />}
+        />
+        <Route path="theemblem" element="THE EMBLEM PAGE" />
+        <Route path="universityhistory" element={<History />} />
+        <Route path="thecampus" element={<Campus />} />
+        <Route path="universitypolicies" element={<Policy />} />
+      </Route>
+
+      {/* ACADEMICS ROUTING */}
       <Route
         path="/academics"
         element={

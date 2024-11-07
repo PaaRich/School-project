@@ -25,7 +25,7 @@ const LayoutFurther = ({ title, links, children }: Props) => {
             <SideBar title={title} links={links} />
           </div>
 
-          <div className="basis-3/4 bg-red-400">{children}</div>
+          <div className="basis-3/4">{children}</div>
         </div>
       </div>
 

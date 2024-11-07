@@ -53,4 +53,11 @@ export const NavDropWrapper = styled.div`
   width: 70%;
   z-index: 1;
 `;
-export const SideBarWrapper = styled.div``;
+export const SideBarWrapper = styled.div`
+  & .active {
+    background-color: #5e779012;
+    border-left-color: #770606;
+    border-left-width: 4px;
+    text-decoration: underline;
+  }
+`;

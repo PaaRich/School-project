@@ -26,3 +26,8 @@ export interface SideBarProps {
     }
   ];
 }
+
+export interface PolicyOneProps {
+  title: string;
+  content: string;
+}
