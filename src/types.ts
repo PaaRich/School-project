@@ -31,3 +31,10 @@ export interface PolicyOneProps {
   title: string;
   content: string;
 }
+
+export interface ProfileImgProps {
+  ProfileImg: string;
+  name: string;
+  position: string;
+  period: string;
+}

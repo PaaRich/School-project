@@ -17,6 +17,8 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // You can also use <link> for styles
 import Campus from "./Pages/About/Campus";
 import Policy from "./Pages/About/Policy";
+import Map from "./Pages/About/Map";
+import ViceChancellors from "./Pages/About/ViceChancellors";
 
 // ..
 AOS.init();
@@ -103,6 +105,8 @@ function App() {
         <Route path="universityhistory" element={<History />} />
         <Route path="thecampus" element={<Campus />} />
         <Route path="universitypolicies" element={<Policy />} />
+        <Route path="mapsdirections" element={<Map />} />
+        <Route path="pastvicechancellors" element={<ViceChancellors />} />
       </Route>
 
       {/* ACADEMICS ROUTING */}
