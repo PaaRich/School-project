@@ -6,7 +6,7 @@ const Header = ({ title }: HeaderProps) => {
   return (
     <HeaderWrapper>
       {/* head */}
-      <h1 className="text-4xl mb-4 text-red-400 font-extralight">{title}</h1>
+      <h1 className="text-4xl mb-2 text-red-800 font-extralight">{title}</h1>
       <div className="flex items-center">
         <span className="bg-green-700 w-32 h-[1px]"></span>
         <FaBuildingColumns className="mx-4" color="green" />

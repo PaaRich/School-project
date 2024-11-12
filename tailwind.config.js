@@ -7,6 +7,10 @@ export default {
         "engineering-students": "url('/public/engineering_student.jpg')",
         university: "url('/public/university_building.jpg')",
       },
+      fontFamily: {
+        roboto: ["Roboto", "serif"],
+        poppins: ["Poppins", "serif"],
+      },
     },
   },
   plugins: [],

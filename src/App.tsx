@@ -19,6 +19,10 @@ import Campus from "./Pages/About/Campus";
 import Policy from "./Pages/About/Policy";
 import Map from "./Pages/About/Map";
 import ViceChancellors from "./Pages/About/ViceChancellors";
+import LandingPage from "./Pages/Academics/LandingPage";
+import Colleges from "./Pages/Academics/Colleges";
+import Department from "./Pages/Academics/Department";
+import Calender from "./Pages/Academics/Calender";
 
 // ..
 AOS.init();
@@ -81,6 +85,22 @@ function App() {
       ],
     },
   ];
+
+  const academicsLinks: Links[] = [
+    {
+      subHeading: "",
+      content: [
+        "Colleges",
+        "Department and Programmes",
+        "Academics Calender",
+        "Academic Services",
+        "Student's financial Services Office",
+        "Congregation",
+        "Affiliate Institutions",
+        "Online Transcript Portal",
+      ],
+    },
+  ];
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -113,11 +133,17 @@ function App() {
       <Route
         path="/academics"
         element={
-          <LayoutFurther title="ACADEMICS" links={link}>
+          <LayoutFurther title="ACADEMICS" links={academicsLinks}>
             <Academics />
           </LayoutFurther>
         }
-      />
+      >
+        <Route index element={<LandingPage />} />
+        <Route path="colleges" element={<Colleges />} />
+        <Route path="departmentandprogrammes" element={<Department />} />
+        <Route path="academicscalender" element={<Calender />} />
+        <Route path="academicservices" element={<p>Academic Services</p>} />
+      </Route>
       <Route
         path="/admission"
         element={

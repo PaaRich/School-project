@@ -26,7 +26,7 @@ const Home = () => {
       {/* HeroHeader */}
       <Slider {...carouselOption}>
         <div className="c-first h-[80dvh]">
-          <div className="max-w-[90%] mx-auto h-full pt-12">
+          <div className="max-w-[90%] mx-auto h-full pt-12 font-roboto">
             {/* card */}
             <div className="bg-white rounded-lg w-[30rem] p-4 relative">
               <h1 className="text-red-800 text-3xl">2024/2025 Admissions</h1>

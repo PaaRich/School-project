@@ -1,7 +1,11 @@
-import { AcademicWrapper } from "./Academics.styled";
+import { Outlet } from "react-router-dom";
 
 const Academics = () => {
-  return <AcademicWrapper>Academics</AcademicWrapper>;
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
 };
 
 export default Academics;
