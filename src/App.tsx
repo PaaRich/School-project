@@ -23,6 +23,7 @@ import LandingPage from "./Pages/Academics/LandingPage";
 import Colleges from "./Pages/Academics/Colleges";
 import Department from "./Pages/Academics/Department";
 import Calender from "./Pages/Academics/Calender";
+import AcademicServices from "./Pages/Academics/AcademicServices";
 
 // ..
 AOS.init();
@@ -142,7 +143,7 @@ function App() {
         <Route path="colleges" element={<Colleges />} />
         <Route path="departmentandprogrammes" element={<Department />} />
         <Route path="academicscalender" element={<Calender />} />
-        <Route path="academicservices" element={<p>Academic Services</p>} />
+        <Route path="academicservices" element={<AcademicServices />} />
       </Route>
       <Route
         path="/admission"
