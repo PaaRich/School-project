@@ -8,6 +8,11 @@ export interface NavDropProps {
   ];
 }
 
+export interface Links {
+  subHeading?: string;
+  content?: string[];
+}
+
 export interface List {
   heading?: string;
   list?: string[];

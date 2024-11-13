@@ -24,84 +24,23 @@ import Colleges from "./Pages/Academics/Colleges";
 import Department from "./Pages/Academics/Department";
 import Calender from "./Pages/Academics/Calender";
 import AcademicServices from "./Pages/Academics/AcademicServices";
+import {
+  link,
+  academicsLinks,
+  admissionLinks,
+  researchLinks,
+  studentsLinks,
+  staffLinks,
+} from "./LinksObj";
+import AdLandingPage from "./Pages/Admission/AdLandingPage";
+import ResearchLanding from "./Pages/Research/ResearchLanding";
+import LandingPageStu from "./Pages/Students/LandingPageStu";
+import LandingPageStaff from "./Pages/Staff/LandingPageStaff";
 
 // ..
 AOS.init();
-interface Links {
-  subHeading?: string;
-  content?: string[];
-}
 
-// Virtual Tour
-
-// The Chancellor
-// Vice-Chancellor's Office
-// Welcome Message from VC
-// The Vice-Chancellor
-// The Pro Vice-Chancellor
-// Related Offices
-// Contact Information
-// Past Vice-Chancellors
-// Past Pro Vice-Chancellors
-
-// Registrar's Office
-
-// Finance Office
-// Related Offices
-// Financial Statements
-// Accounting Policies and
 function App() {
-  const link: Links[] = [
-    {
-      subHeading: "The Knust",
-      content: [
-        " Strategic Mandate, Vision, Mission & Core Values",
-        "The Emblem",
-        "University History",
-        "University Policies",
-        "The Campus",
-        "Maps & Directions",
-        "Past Vice-Chancellors",
-        "Past Pro Vice-Chancellors",
-        "Past Registrars",
-        "Council Charter",
-      ],
-    },
-    {
-      subHeading: "Administration of the University",
-      content: [
-        "The University Council",
-        "The Principal Officers",
-        "Professional Officers",
-      ],
-    },
-
-    {
-      subHeading: "Registrar's Offices",
-      content: [
-        "The Registrar",
-        "Divisions",
-        "Registrar's Contact",
-        "Past Registrars",
-      ],
-    },
-  ];
-
-  const academicsLinks: Links[] = [
-    {
-      subHeading: "",
-      content: [
-        "Colleges",
-        "Department and Programmes",
-        "Academics Calender",
-        "Academic Services",
-        "Student's financial Services Office",
-        "Congregation",
-        "Affiliate Institutions",
-        "Online Transcript Portal",
-      ],
-    },
-  ];
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -145,46 +84,74 @@ function App() {
         <Route path="academicscalender" element={<Calender />} />
         <Route path="academicservices" element={<AcademicServices />} />
       </Route>
+
+      {/* ADMISSION */}
       <Route
         path="/admission"
         element={
-          <LayoutFurther title="ADMISSION" links={link}>
+          <LayoutFurther title="ADMISSION" links={admissionLinks}>
             <Admission />
           </LayoutFurther>
         }
-      />
+      >
+        <Route index element={<AdLandingPage />} />
+        <Route path="howtoapply" element={<p>HOW TO APPLY</p>} />
+        <Route path="cutoffpoints" element={<p>CUT-OFF POINTS</p>} />
+        <Route
+          path="undergraduateadmissions"
+          element={<p>UNDERGRADUATE ADMISSION</p>}
+        />
+      </Route>
+
+      {/* RESEARCH */}
       <Route
         path="/research"
         element={
-          <LayoutFurther title="RESEARCH" links={link}>
+          <LayoutFurther title="RESEARCH" links={researchLinks}>
             <Research />
           </LayoutFurther>
         }
-      />
+      >
+        <Route index element={<ResearchLanding />} />
+        <Route path="research" element={<p>RESEARCH</p>} />
+      </Route>
+
+      {/* MEDIA */}
       <Route
-        path="/media"
+        path="/"
         element={
           <LayoutFurther title="MEDIA" links={link}>
             <Media />
           </LayoutFurther>
         }
       />
+
       <Route
         path="/staff"
         element={
-          <LayoutFurther title="STAFF" links={link}>
+          <LayoutFurther title="STAFF" links={staffLinks}>
             <Staff />
           </LayoutFurther>
         }
-      />
+      >
+        <Route index element={<LandingPageStaff />} />
+        <Route path="staff" element={<p>STAFF</p>} />
+        <Route path="staffdirectory" element={<p>STAFF DIRECTORY</p>} />
+      </Route>
+
+      {/* STUDENTS */}
       <Route
         path="/students"
         element={
-          <LayoutFurther title="STUDENT" links={link}>
+          <LayoutFurther title="STUDENT" links={studentsLinks}>
             <Student />
           </LayoutFurther>
         }
-      />
+      >
+        <Route index element={<LandingPageStu />} />
+        <Route path="campuslife" element={<p>CAMPUS LIFE</p>} />
+        <Route path="campusfacilities" element={<p>CAMPUS FACILITIES</p>} />
+      </Route>
       <Route
         path="/alumini"
         element={

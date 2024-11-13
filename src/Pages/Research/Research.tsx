@@ -1,5 +1,11 @@
+import { Outlet } from "react-router-dom";
+
 const Research = () => {
-  return <div>Research</div>;
+  return (
+    <div className="max-w-[90%]">
+      <Outlet />
+    </div>
+  );
 };
 
 export default Research;

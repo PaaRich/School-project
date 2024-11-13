@@ -1,5 +1,10 @@
+import { Outlet } from "react-router-dom";
 const Student = () => {
-  return <div>Student</div>;
+  return (
+    <div>
+      <Outlet />
+    </div>
+  );
 };
 
 export default Student;
